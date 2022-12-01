@@ -1,0 +1,18 @@
+<h2>Fila</h2>
+
+<div *ngFor="let carta of this.fila.getFila(); let vIndex = index">
+
+        <!--Visible-->
+        <span *ngIf="carta.visible" >
+            {{carta!.num}} - {{carta!.pal}}
+            <img src="../../../../assets/Imatges/{{carta.img}}" alt="carta">
+        </span>
+
+        <!--No visible-->
+        <span *ngIf="!carta.visible" (click)="agafar(carta, fila)">
+            {{carta!.num}} - {{carta!.pal}}
+            <br>
+            <img src="../../../../assets/Imatges/revers.png" alt="carta">
+        </span>   
+ 
+</div>
