@@ -1,0 +1,6 @@
+<p>baralla works!</p>
+<div *ngFor="let fila of this.baralla.getBaralla(); let vIndex = index">
+        <span (click)="agafarFila(fila)">
+                <app-fila [fila]="fila" ></app-fila>
+        </span>
+</div>

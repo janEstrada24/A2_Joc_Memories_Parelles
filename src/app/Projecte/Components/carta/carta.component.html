@@ -1,0 +1,12 @@
+<!--Visible-->
+<span *ngIf="carta.visible" >
+    {{carta!.num}} - {{carta!.pal}}
+    <img src="../../../../assets/Imatges/{{carta.img}}" alt="carta">
+</span>
+
+<!--No visible-->
+<span *ngIf="!carta.visible" (click)="agafar(carta)">
+    {{carta!.num}} - {{carta!.pal}}
+    <br>
+    <img src="../../../../assets/Imatges/revers.png" alt="carta">
+</span>
